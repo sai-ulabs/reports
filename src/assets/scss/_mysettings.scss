@@ -14,11 +14,15 @@ $button-margin: 0 0 $global-margin 0;
 $button-background: $my-body-background-color;
 $button-border: 2px solid $my-report-color;
 $button-radius: $global-radius;
-// 
-.set-right-justified {
-  text-align: right !important;
-  table {
-    display: inline !important;
-    text-align: right !important;
+// For 4 grid boxes
+@media only screen and (max-width: #{$global-breakpoint}) {
+  .total-users-block {
+    border-width: 10px 0px 0px 0 !important;
+  }
+  .total-lockunlock-block {
+    border-width: 5px 0px 0px 0 !important;
+  }
+  .total-hours-block {
+    border-width: 10px 0px 10px 0 !important;
   }
 }
