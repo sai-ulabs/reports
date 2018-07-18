@@ -1,5 +1,5 @@
-// var exportUrl = "http://export.highcharts.com/";
-var exportUrl = "http://localhost:7801/";
+var exportUrl = "http://export.highcharts.com/";
+// var exportUrl = "http://localhost:7801/";
 
 function addImage(options, selector) {
   var optionsStr = JSON.stringify(options),
@@ -202,6 +202,86 @@ function createDepartmentImages() {
   addImage(totalSessionsChartOptions, ".dept_total_sessions_chart");
 }
 
+// function createProductivityImages() {
+//   var params = {};
+
+//   params.legends = false;
+
+//   params.categories = ["June", "May"];
+//   // params.thisMonthData = { name: "June", data: thisMonthSessions, color: "#7094AA" };
+//   // params.lastMonthData = { name: "May", data: lastMonthSessions, color: "#FFDA83" };
+
+//   params.series = [
+//     {
+//       name: "Total Sessions",
+//       data: [{ y: Data.thisMonth.sessions, color: "#7094AA" }, { y: Data.lastMonth.sessions, color: "#FFDA83" }]
+//     }
+//   ]
+//   var totalSessionChartOptions = createProductivityChartOptions(params);
+
+//   addImage(totalSessionChartOptions, ".productivity_sessions_chart");
+
+
+//   params.series = [
+//     {
+//       name: "Total Sessions",
+//       data: [{ y: Data.thisMonth.time, color: "#7094AA" }, { y: Data.lastMonth.time, color: "#FF8373" }]
+//     }
+//   ]
+
+//   var totalTimeChartOptions = createProductivityChartOptions(params);
+
+//   addImage(totalTimeChartOptions, ".productivity_hours_chart");
+
+
+//   var minUtilDept = "";
+//   var minUtilTime = Number.MAX_VALUE;
+
+//   var maxUtilDept = "";
+//   var maxUtilTime = Number.MIN_VALUE;
+
+//   var avgUtilTitle = "Department Average"
+//   var avgUtilTime = 0;
+//   var deptCount = 0;
+
+//   Data.thisMonth.departments.forEach(function (dept, i) {
+//     if (dept.time > maxUtilTime) {
+//       maxUtilDept = dept.name,
+//         maxUtilTime = dept.time
+//     } else if (dept.time < minUtilTime) {
+//       minUtilDept = dept.name,
+//         minUtilTime = dept.time
+//     }
+
+//     avgUtilTime = Number(dept.time);
+//     deptCount += 1;
+//   });
+
+//   avgUtilTime = avgUtilTime / deptCount;
+
+//   var minUtilFinal = Math.round(minUtilTime);
+//   var avgUtilFinal = Math.round(avgUtilTime);
+//   var maxUtilFinal = Math.round(maxUtilTime);
+
+//   params.categories = [minUtilFinal, avgUtilFinal, maxUtilFinal];
+//   params.series = [
+//     {
+//       name: "Computer Utilization",
+//       data: [{ y: minUtilFinal, color: "#FF8373" }, { y: avgUtilFinal, color: "#7094AA" }, { y: maxUtilFinal, color: "#5AD799" }]
+//     }
+//   ]
+
+//   params.legends = false;
+
+//   var totalUtilityChartOptions = createProductivityChartOptions(params);
+
+//   addImage(totalUtilityChartOptions, ".productivity_utilization_chart");
+
+//   $(".min-util-dept").text(minUtilDept);
+//   $(".avg-util").text("Department Average");
+//   $(".max-util-dept").text(maxUtilDept);
+// }
+
 function createProductivityImages() {
   var params = {};
 
@@ -210,6 +290,13 @@ function createProductivityImages() {
   params.categories = ["June", "May"];
   // params.thisMonthData = { name: "June", data: thisMonthSessions, color: "#7094AA" };
   // params.lastMonthData = { name: "May", data: lastMonthSessions, color: "#FFDA83" };
+
+
+  // GateKeeper saves approx 15s password typing
+  var unitTime = 15;
+
+  // total time saved = unitTime * no.gatekeeper unlocks
+
 
   params.series = [
     {
@@ -234,56 +321,11 @@ function createProductivityImages() {
   addImage(totalTimeChartOptions, ".productivity_hours_chart");
 
 
-  var minUtilDept = "";
-  var minUtilTime = Number.MAX_VALUE;
 
-  var maxUtilDept = "";
-  var maxUtilTime = Number.MIN_VALUE;
-
-  var avgUtilTitle = "Department Average"
-  var avgUtilTime = 0;
-  var deptCount = 0;
-
-  Data.thisMonth.departments.forEach(function (dept, i) {
-    if (dept.time > maxUtilTime) {
-      maxUtilDept = dept.name,
-        maxUtilTime = dept.time
-    } else if (dept.time < minUtilTime) {
-      minUtilDept = dept.name,
-        minUtilTime = dept.time
-    }
-
-    avgUtilTime = Number(dept.time);
-    deptCount += 1;
-  });
-
-  avgUtilTime = avgUtilTime / deptCount;
-
-  var minUtilFinal = Math.round(minUtilTime);
-  var avgUtilFinal = Math.round(avgUtilTime);
-  var maxUtilFinal = Math.round(maxUtilTime);
-
-  params.categories = [minUtilFinal, avgUtilFinal, maxUtilFinal];
-  params.series = [
-    {
-      name: "Computer Utilization",
-      data: [{ y: minUtilFinal, color: "#FF8373" }, { y: avgUtilFinal, color: "#7094AA" }, { y: maxUtilFinal, color: "#5AD799" }]
-    }
-  ]
-
-  params.legends = false;
-
-  var totalUtilityChartOptions = createProductivityChartOptions(params);
-
-  addImage(totalUtilityChartOptions, ".productivity_utilization_chart");
-
-  $(".min-util-dept").text(minUtilDept);
-  $(".avg-util").text("Department Average");
-  $(".max-util-dept").text(maxUtilDept);
 }
 
 
 $(document).ready(function () {
-  createDepartmentImages();
+  // createDepartmentImages();
   createProductivityImages();
 });
