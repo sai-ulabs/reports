@@ -301,7 +301,7 @@ function createProductivityImages() {
   params.series = [
     {
       name: "Total Sessions",
-      data: [{ y: Data.thisMonth.sessions, color: "#7094AA" }, { y: Data.lastMonth.sessions, color: "#FFDA83" }]
+      data: [{ y: Data.thisMonth.sessions, color: "#7094AA" }, { y: Data.lastMonth.sessions, color: "#5AD799" }]
     }
   ]
   var totalSessionChartOptions = createProductivityChartOptions(params);

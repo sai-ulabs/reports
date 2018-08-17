@@ -16,7 +16,7 @@
       </a>
     </columns>
     <columns small="6" large="6" valign="middle" style="padding-top: 10px; padding-left: 150px;">
-      <button href="https://gkaccess.com/" target="_blank" class="tiny small-float-center float-right">VIEW FULL REPORT</button>
+      <button href="https://gkaccess.com/" target="_blank" class="tiny small-float-center float-right full-report-link">VIEW FULL REPORT</button>
     </columns>
   </row>
 
@@ -24,18 +24,19 @@
   <row>
     <columns small="12" large="8" valign="middle" bgcolor="#263746">
       <p style="font-weight: bold; font-size: 28px; color:white; padding: 10px 0 0 0;">Monthly Activity Report</p>
-      <p style="font-size: 16px; color:white;" class="company-name-header">Farmington Financial</p>
+      <p style="font-size: 16px; color:white;" class="companyName">Farmington Financial</p>
     </columns>
     <columns small="12" large="4" valign="middle" bgcolor="#7094AA" style="padding: 0 0 0 0;">
-      <p style="font-weight: bold; font-size: 36px; color:white;" class="text-center month-header">07.18</p>
+      <p style="font-weight: bold; font-size: 36px; color:white; padding: 30px 0 0 0;" class="text-center monthInHeader">07.18</p>
     </columns>
   </row>
   <spacer size="10"></spacer>
 
   <row>
     <columns small="12" large="12" valign="middle" bgcolor="#407CCA">
-      <p style="font-weight: bold; font-size: 106px; color:white; padding: 10px 0 0 0;" class="text-center saved-count-hero">7606</p>
-      <p style="font-size: 21px; color:white; padding: 10px 0 0 0;" class="text-center">User minutes saved in July with GateKeeper</p>
+      <p style="font-weight: bold; font-size: 106px; color:white; padding: 10px 0 0 0;" class="text-center timeSavedThisMonth">7606</p>
+      <p style="font-size: 21px; color:white; padding: 10px 0 0 0;" class="text-center">User minutes saved in
+        <span class="thisMonth">July</span> with GateKeeper</p>
       <p style="font-size: 12px; color:white; padding: 10px 0 0 0;" class="text-center"> * Based on average password typing in time of 15s and number of times computers & web credentials were used</p>
     </columns>
   </row>
@@ -47,7 +48,7 @@
         <img src="https://res.cloudinary.com/da8s7lqej/image/upload/v1531866972/GKMonthlyReports/logins.png" alt="Total Computer & Web Logins"
           style="width: 60px;">
       </center>
-      <p style="font-weight: bold; font-size: 46px; color:#FF8F4A; padding: 10px 0 0 0;" class="text-center logins-grid">5450</p>
+      <p style="font-weight: bold; font-size: 46px; color:#FF8F4A; padding: 10px 0 0 0;" class="text-center gkLoginsThisMonth">5450</p>
       <p style="font-size: 16px; color:black;" class="text-center">total computer & web logins</p>
     </columns>
     <columns small="12" large="6" valign="middle" style="padding:20px 0 0 0; border-width: 10px 0px 5px 0; border-style:solid; border-color: #f3f3f3;"
@@ -56,7 +57,7 @@
         <img src="https://res.cloudinary.com/da8s7lqej/image/upload/v1531866972/GKMonthlyReports/hours.png" alt="Total Hours spent on computers"
           style="width: 60px;">
       </center>
-      <p style="font-weight: bold; font-size: 46px; color:#FF457E; padding: 10px 0 0 0;" class="text-center hours-spent-grid">500</p>
+      <p style="font-weight: bold; font-size: 46px; color:#FF457E; padding: 10px 0 0 0;" class="text-center loggedInHoursThisMonth">500</p>
       <p style="font-size: 16px; color:black;" class="text-center">total hours spent on computers</p>
 
     </columns>
@@ -69,7 +70,7 @@
         <img src="https://res.cloudinary.com/da8s7lqej/image/upload/v1531866972/GKMonthlyReports/keystrokes.png" alt="Keystrokes saved"
           style="width: 60px;">
       </center>
-      <p style="font-weight: bold; font-size: 46px; color:#5AD799; padding: 10px 0 0 0;" class="text-center key-strokes-grid">75000</p>
+      <p style="font-weight: bold; font-size: 46px; color:#5AD799; padding: 10px 0 0 0;" class="text-center keystrokesSavedThisMonth">75000</p>
       <p style="font-size: 16px; color:black;" class="text-center">keystrokes saved</p>
     </columns>
     <columns small="12" large="6" valign="middle" style="padding:10px 0 0 0; border-width: 5px 0px 10px 0; border-style:solid; border-color: #f3f3f3;"
@@ -78,8 +79,8 @@
         <img src="https://res.cloudinary.com/da8s7lqej/image/upload/v1531866972/GKMonthlyReports/dollars.png" alt="Dollars Saved in productivity"
           style="width: 60px;">
       </center>
-      <p style="font-weight: bold; font-size: 46px; color:#4694FF; padding: 10px 0 0 0; " class="text-center dollars-saved-grid">5000</p>
-      <p style="font-size: 16px; color:black; " class="text-center ">savings in productivity</p>
+      <p style="font-weight: bold; font-size: 46px; color:#4694FF; padding: 10px 0 0 0; " class="text-center dollarsSavedThisMonth">5000</p>
+      <p style="font-size: 16px; color:black; " class="text-center">savings in productivity (USD)</p>
     </columns>
   </row>
 
@@ -124,17 +125,18 @@
     <columns small="12" large="6" valign="middle" style="padding: 10px 0 0 20px;">
       <p style="font-weight: bold; font-size: 18px; color: #5AD799; padding: 10px 10px 10px 10px;">TOTAL DOLLARS SAVED</p>
       <p style="font-size: 16px; color:white; padding: 10px 10px 10px 10px;">Them company saved an approximate
-        <span class="dollars-saved" style="font-weight: bold">$ 5000</span> in
-        <span class="this-month">June</span>. This is
-        <span class="dollars-saved-percent" style="font-weight: bold">x %</span> increase over
-        <span class="last-month">May</span>.
+        <span class="dollarsSavedThisMonth" style="font-weight: bold">$ 5000</span> in
+        <span class="thisMonth">June</span>. This is
+        <span class="dollarsSavedDifferencePercent" style="font-weight: bold">x %</span>
+        <span class="dollarsSavedIncreaseOrDecrease">increase</span> over
+        <span class="lastMonth">May</span>.
       </p>
       <p style="font-size: 12px; color:white; padding: 10px 10px 10px 10px;">* Assuming an average of $30 / hr</p>
     </columns>
 
     <columns small="12" large="6" valign="middle" style="padding: 40px 40px 40px 40px;">
       <center>
-        <img class="productivity_hours_chart" src="" alt="Total Dollars Saved Chart">
+        <img class="totalDollarsSavedImage" src="" alt="Total Dollars Saved Chart">
       </center>
     </columns>
   </row>
@@ -145,15 +147,15 @@
     <columns small="12" large="6" valign="middle" style="padding: 10px 0 0 20px;">
       <p style="font-weight: bold; font-size: 18px; color:#FF8373; padding: 10px 10px 10px 10px;">TOTAL TIME SAVED</p>
       <p style="font-size: 16px; color:white; padding: 10px 10px 10px 10px;">Users saved a total of
-        <span class="time-saved" style="font-weight: bold">500 hrs</span> in typing in passwords for their computers and websites. This is
-        <span class="time-saved-percent" style="font-weight: bold">x %</span> increase over
-        <span class="last-month">May</span>.
+        <span class="timeSavedThisMonth" style="font-weight: bold">500</span> hrs in typing in passwords for their computers and websites. This is
+        <span class="timeSavedDifferencePercent" style="font-weight: bold">x %</span> <span class="timeSavedIncreaseOrDecrease">increase</span> over
+        <span class="lastMonth">May</span>.
       </p>
     </columns>
 
     <columns small="12" large="6" valign="middle" style="padding: 40px 40px 40px 40px;">
       <center>
-        <img class="productivity_hours_chart" src="" alt="Total Time Saved Chart">
+        <img class="totalTimeSavedImage" src="" alt="Total Time Saved Chart">
       </center>
     </columns>
   </row>
@@ -164,17 +166,17 @@
     <columns small="12" large="6" valign="middle" style="padding: 10px 0 0 20px;">
       <p style="font-weight: bold; font-size: 18px; color:#FFDA83; padding: 10px 10px 10px 10px;">TOTAL KEYSTROKES SAVED</p>
       <p style="font-size: 16px; color:white; padding: 10px 10px 10px 10px;">Users saved a total of
-        <span class="keystrokes-saved" style="font-weight: bold">5000</span> keystrokes while accessing their computers and websites in
-        <span class="this-month">June</span>. This is
-        <span class="keystrokes-saved-percent" style="font-weight: bold">x %</span> increase over
-        <span class="last-month">May</span>.
+        <span class="keystrokesSavedThisMonth" style="font-weight: bold">5000</span> keystrokes while accessing their computers and websites in
+        <span class="thisMonth">June</span>. This is
+        <span class="keystrokesSavedDifferencePercent" style="font-weight: bold">x %</span> <span class="keystrokesSavedIncreaseOrDecrease">increase</span> over
+        <span class="lastMonth">May</span>.
       </p>
       <p style="font-size: 12px; color:white; padding: 10px 10px 10px 10px;">* Assuming an average of $30 / hr</p>
     </columns>
 
     <columns small="12" large="6" valign="middle" style="padding: 40px 40px 40px 40px;">
       <center>
-        <img class="productivity_hours_chart" src="" alt="Total Keystrokes Saved Chart">
+        <img class="totalKeystrokesSavedImage" src="" alt="Total Keystrokes Saved Chart">
       </center>
     </columns>
   </row>
@@ -185,15 +187,15 @@
     <columns small="12" large="6" valign="middle" style="padding: 10px 0 0 20px;">
       <p style="font-weight: bold; font-size: 18px; color:#56D9FE; padding: 10px 10px 10px 10px;">TOTAL LOGGED IN HOURS</p>
       <p style="font-size: 16px; color:white; padding: 10px 10px 10px 10px;">Users spent in
-        <span class="loggedin-hours">58,720 hours</span> on their comoputers in
-        <span class="this-month">July</span>, a
-        <span class="loggedin-percent">9%</span> increase from
-        <span class="last-month">June</span>.</p>
+        <span class="loggedInHoursThisMonth" style="font-weight: bold;">58,720</span> hours on their comoputers in
+        <span class="thisMonth">July</span>, a
+        <span class="loggedInHoursDifferencePercent" style="font-weight: bold">9%</span> <span class="loggedInHoursIncreaseOrDecrease">increase</span> from
+        <span class="lastMonth">June</span>.</p>
     </columns>
 
     <columns small="12" large="6" valign="middle" style="padding: 40px 40px 40px 40px;">
       <center>
-        <img class="productivity_hours_chart" src="" alt="Total Logged In Hours Chart">
+        <img class="totalLoggedInHoursSavedImage" src="" alt="Total Logged In Hours Chart">
       </center>
     </columns>
   </row>
@@ -204,16 +206,16 @@
     <columns small="12" large="6" valign="middle" style="padding: 10px 0 0 20px;">
       <p style="font-weight: bold; font-size: 18px; color:#5AD799; padding: 10px 10px 10px 10px;">TOTAL USER SESSIONS</p>
       <p style="font-size: 16px; color:white; padding: 10px 10px 10px 10px;">Users logged in their computers and web applications
-        <span class="user-sessions" style="font-weight: bold">5000</span> times in
-        <span class="this-month">June</span>. This is
-        <span class="user-sessions_percent" style="font-weight: bold">x %</span> increase over
-        <span class="last-month">May</span>.
+        <span class="userSessionsThisMonth" style="font-weight: bold">5000</span> times in
+        <span class="thisMonth">June</span>. This is
+        <span class="userSessionsDifferencePercent" style="font-weight: bold">x %</span> <span class="userSessionsIncreaseOrDecrease">increase</span> over
+        <span class="lastMonth">May</span>.
       </p>
     </columns>
 
     <columns small="12" large="6" valign="middle" style="padding: 40px 40px 40px 40px;">
       <center>
-        <img class="productivity_sessions_chart" src="" alt="Total User Sessions Chart">
+        <img class="totalUserSessionsSavedImage" src="" alt="Total User Sessions Chart">
       </center>
     </columns>
   </row>
