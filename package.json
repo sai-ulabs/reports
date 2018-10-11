@@ -5,11 +5,11 @@
   "repository": "zurb/foundation-emails-template",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp --production",
-    "zip": "gulp zip --production",
-    "litmus": "gulp litmus --production",
-    "mail": "gulp mail --production"
+    "start": "node ./node_modules/gulp/bin/gulp.js",
+    "build": "node ./node_modules/gulp/bin/gulp.js --production",
+    "zip": "node ./node_modules/gulp/bin/gulp.js zip --production",
+    "litmus": "node ./node_modules/gulp/bin/gulp.js litmus --production",
+    "mail": "node ./node_modules/gulp/bin/gulp.js mail --production"
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
